@@ -11,8 +11,8 @@ $params = array_map(function($item){
 if(($k = array_search('_cm', array_column($params, 0))) !== false && $params[$k][1] === '1'){
     ob_start();
     /**
-     * $curl 请求地址
-     * $data 请求返回
+     * $url - request url
+     * $data - response
      */
     print_r(['url'=>$url, 'result' => $data]);
     $c = ob_get_clean();
